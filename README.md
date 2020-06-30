@@ -1,3 +1,4 @@
+# Revassess
 # Tier 2
 
 **Category:** SQL
@@ -27,5 +28,5 @@
     - Value: 30 points
 	
 
-  - Write a query that will obtain the owner’s username, as well as the category name, questions, and answers of flashcard contained within the study set with and id of 4.
+  - Write a query that will obtain the owner’s username, as well as the category name, questions, and answers of flashcard contained within the study set where the owner's id is 4.
     - Value: 40 points
