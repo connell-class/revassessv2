@@ -1,34 +1,31 @@
-# REVASSESS
-**This assessment will gauge your understanding of the content to this point**
+# Tier 2
 
-Make sure you add your email address to the travis.yml file.
+**Category:** SQL
 
-There are six tiers for this assessment that will get more difficult
-with each tier. Beginning with Tier 3, they will begin working off 
-previous work. So for example, tier 4 may use a db table constructed 
-in tier 3. Therefore, it is vital that each tier be completed before
-moving on to the next. Also, the automation will check each tier 
-iterably and will stop when it reaches an incomplete tier.
+**Difficulty:** Novice
 
-You will begin by moving branches to tier 1 and completing
-the prompts given in the markdown file. after the successful
-completion of the requirements, you can move to the tier 2
-branch and complete those requirements. tiers 3 through 6 
-will all be in the same tier.
+**Estimated time to complete:** 20 minutes
 
-To submit your work, push your changes to the respective 
-branch. Your trainer can verify if the tier was successfully
-completed. 
+**Minimum completion:** 60 points
 
-Your score is a compilation of the number of tiers completed
-and the total number of points accumulated. It is important 
-that this is understood and it will be your decision if you
-continue to gather points on the current tier or move on to
-the next (the minimum number of points to move on to the 
-next tier is not equal to the total number of points able to 
-be acquired).
+**Description/Setup:**
+  - ERD: [Quizzard Entity Relationship Diagram](https://revature-note-assets.s3.amazonaws.com/quizzard-erd.png)
+  - Using the provided ERD, create a single query that satisfies the task
+  - Personalized DB user credentials will be provided to connect with IDE for script creation
+  - Push script file to personal branch to proceed to Tier 3
 
-**WARNING**
+**Problem Set:**
+  - Write a query that will find all user info related to users with a role of BASIC_USER
+    - Value: 10 points
 
-Do not alter the files in the test folder for any reason
-whatsoever.
+
+  - Write a statement that will insert a new user into the APP_USER table with a role of PREMIUM_USER
+    - Value: 20 points
+
+
+  - Write a query that will find all user and study set info related to the user with an id of 5
+    - Value: 30 points
+	
+
+  - Write a query that will obtain the owner’s username, as well as the category name, questions, and answers of flashcard contained within the study set with and id of 4.
+    - Value: 40 points
