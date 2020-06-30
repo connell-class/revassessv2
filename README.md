@@ -11,7 +11,7 @@
 
 **Description/Setup:**
   - User class diagram: [here](https://revature-note-assets.s3.amazonaws.com/quizzard-class-diagram-tier-1.png)
-  - Push code to personal branch on repo provided by trainer. Notify trainer via Slack to proceed to Tier 2
+  - Push code to the branch on repo to be notified by email provided on master branch.
 
 **Problem Set:**
   - Create a method that checks if two strings are equal and return the boolean result.
