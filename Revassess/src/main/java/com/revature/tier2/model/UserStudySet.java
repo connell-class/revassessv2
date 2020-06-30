@@ -24,21 +24,21 @@ public class UserStudySet {
     private String lastName;
     @Column(name = "role_id")
     private int roleId;
-    private int study_set_id;
+    @Column(name="study_set_id")
+    private int studySetId;
     private String name;
 
 
     public UserStudySet() {
     }
 
-    public UserStudySet(final int id, final String username, final String password, final String firstName, final String lastName, final int roleId, final int study_set_id, final String name) {
-        this.id = id;
+    public UserStudySet(final String username, final String password, final String firstName, final String lastName, final int roleId, final int study_set_id, final String name) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.roleId = roleId;
-        this.study_set_id = study_set_id;
+        this.studySetId = study_set_id;
         this.name = name;
     }
 
@@ -90,12 +90,12 @@ public class UserStudySet {
         this.roleId = roleId;
     }
 
-    public int getStudy_set_id() {
-        return this.study_set_id;
+    public int getStudySetId() {
+        return this.studySetId;
     }
 
-    public void setStudy_set_id(final int study_set_id) {
-        this.study_set_id = study_set_id;
+    public void setStudySetId(final int study_set_id) {
+        this.studySetId = study_set_id;
     }
 
     public String getName() {
@@ -106,46 +106,6 @@ public class UserStudySet {
         this.name = name;
     }
 
-    public UserStudySet id(final int id) {
-        this.id = id;
-        return this;
-    }
-
-    public UserStudySet username(final String username) {
-        this.username = username;
-        return this;
-    }
-
-    public UserStudySet password(final String password) {
-        this.password = password;
-        return this;
-    }
-
-    public UserStudySet firstName(final String firstName) {
-        this.firstName = firstName;
-        return this;
-    }
-
-    public UserStudySet lastName(final String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
-
-    public UserStudySet roleId(final int roleId) {
-        this.roleId = roleId;
-        return this;
-    }
-
-    public UserStudySet study_set_id(final int study_set_id) {
-        this.study_set_id = study_set_id;
-        return this;
-    }
-
-    public UserStudySet name(final String name) {
-        this.name = name;
-        return this;
-    }
-
     @Override
     public boolean equals(final Object o) {
         if (o == this)
@@ -154,12 +114,12 @@ public class UserStudySet {
             return false;
         }
         final UserStudySet userStudySet = (UserStudySet) o;
-        return id == userStudySet.id && Objects.equals(username, userStudySet.username) && Objects.equals(password, userStudySet.password) && Objects.equals(firstName, userStudySet.firstName) && Objects.equals(lastName, userStudySet.lastName) && roleId == userStudySet.roleId && study_set_id == userStudySet.study_set_id && Objects.equals(name, userStudySet.name);
+        return id == userStudySet.id && Objects.equals(username, userStudySet.username) && Objects.equals(password, userStudySet.password) && Objects.equals(firstName, userStudySet.firstName) && Objects.equals(lastName, userStudySet.lastName) && roleId == userStudySet.roleId && studySetId == userStudySet.studySetId && Objects.equals(name, userStudySet.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, password, firstName, lastName, roleId, study_set_id, name);
+        return Objects.hash(id, username, password, firstName, lastName, roleId, studySetId, name);
     }
 
     @Override
@@ -171,7 +131,7 @@ public class UserStudySet {
             ", firstName='" + getFirstName() + "'" +
             ", lastName='" + getLastName() + "'" +
             ", roleId='" + getRoleId() + "'" +
-            ", study_set_id='" + getStudy_set_id() + "'" +
+            ", study_set_id='" + getStudySetId() + "'" +
             ", name='" + getName() + "'" +
             "}";
     }

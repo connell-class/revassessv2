@@ -12,9 +12,9 @@ public class UserProblem4 {
     @Id
     private String username;
     @Column(name = "name", insertable = false, updatable = false)
-    private String set_name;
+    private String setName;
     @Column(name = "name", insertable = false, updatable = false)
-    private String category_name;
+    private String categoryName;
     private String question;
     private String answer;
 
@@ -22,10 +22,10 @@ public class UserProblem4 {
     public UserProblem4() {
     }
 
-    public UserProblem4(String username, String set_name, String category_name, String question, String answer) {
+    public UserProblem4(String username, String setName, String categoryName, String question, String answer) {
         this.username = username;
-        this.set_name = set_name;
-        this.category_name = category_name;
+        this.setName = setName;
+        this.categoryName = categoryName;
         this.question = question;
         this.answer = answer;
     }
@@ -38,20 +38,20 @@ public class UserProblem4 {
         this.username = username;
     }
 
-    public String getSet_name() {
-        return this.set_name;
+    public String getSetName() {
+        return this.setName;
     }
 
-    public void setSet_name(String set_name) {
-        this.set_name = set_name;
+    public void setSetName(String setName) {
+        this.setName = setName;
     }
 
-    public String getCategory_name() {
-        return this.category_name;
+    public String getCategoryName() {
+        return this.categoryName;
     }
 
-    public void setCategory_name(String category_name) {
-        this.category_name = category_name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getQuestion() {
@@ -75,13 +75,13 @@ public class UserProblem4 {
         return this;
     }
 
-    public UserProblem4 set_name(String set_name) {
-        this.set_name = set_name;
+    public UserProblem4 setName(String setName) {
+        this.setName = setName;
         return this;
     }
 
-    public UserProblem4 category_name(String category_name) {
-        this.category_name = category_name;
+    public UserProblem4 categoryName(String categoryName) {
+        this.categoryName = categoryName;
         return this;
     }
 
@@ -103,23 +103,24 @@ public class UserProblem4 {
             return false;
         }
         UserProblem4 userProblem4 = (UserProblem4) o;
-        return Objects.equals(username, userProblem4.username) && Objects.equals(set_name, userProblem4.set_name) && Objects.equals(category_name, userProblem4.category_name) && Objects.equals(question, userProblem4.question) && Objects.equals(answer, userProblem4.answer);
+        return Objects.equals(username, userProblem4.username) && Objects.equals(setName, userProblem4.setName) && Objects.equals(categoryName, userProblem4.categoryName) && Objects.equals(question, userProblem4.question) && Objects.equals(answer, userProblem4.answer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(username, set_name, category_name, question, answer);
+        return Objects.hash(username, setName, categoryName, question, answer);
     }
 
     @Override
     public String toString() {
         return "{" +
             " username='" + getUsername() + "'" +
-            ", set_name='" + getSet_name() + "'" +
-            ", category_name='" + getCategory_name() + "'" +
+            ", setName='" + getSetName() + "'" +
+            ", categoryName='" + getCategoryName() + "'" +
             ", question='" + getQuestion() + "'" +
             ", answer='" + getAnswer() + "'" +
             "}";
     }
 
+ 
 }
