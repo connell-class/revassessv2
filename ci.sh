@@ -1,9 +1,9 @@
 test(){
-    for i in 1 2 3
+    for i in 1 2 3456
     do
         git checkout tier$i
         git pull
-        cd ./RevassessTier$i/
+        cd ./Revassess/
         pass="`mvn clean test -Dtest=Tier${i}Tests`"
         exitCode="`echo $pass | grep PointsTests | grep -c FAILURE`"
       	tierPoints="`echo $pass | grep -oE '_points:[0-9]+' | grep -Eo '[0-9]+'`"

@@ -1,2 +1,7 @@
-/.vscode/
 /.metadata/
+/.vscode/
+**/target/
+**/bin/
+**/.settings/
+**/.project
+**/.classpath
