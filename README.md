@@ -1,34 +1,31 @@
 # REVASSESS
-**This assessment will gauge your understanding of the content to this point**
+# Tier 1
 
-Make sure you add your email address to the travis.yml file.
+**Category:** Git and Core Java
 
-There are six tiers for this assessment that will get more difficult
-with each tier. Beginning with Tier 3, they will begin working off 
-previous work. So for example, tier 4 may use a db table constructed 
-in tier 3. Therefore, it is vital that each tier be completed before
-moving on to the next. Also, the automation will check each tier 
-iterably and will stop when it reaches an incomplete tier.
+**Difficulty:** Warm Up
 
-You will begin by moving branches to tier 1 and completing
-the prompts given in the markdown file. after the successful
-completion of the requirements, you can move to the tier 2
-branch and complete those requirements. tiers 3 through 6 
-will all be in the same tier.
+**Estimated time to complete:** 15 - 30 minutes
 
-To submit your work, push your changes to the respective 
-branch. Your trainer can verify if the tier was successfully
-completed. 
+**Minimum completion:** 60 points
 
-Your score is a compilation of the number of tiers completed
-and the total number of points accumulated. It is important 
-that this is understood and it will be your decision if you
-continue to gather points on the current tier or move on to
-the next (the minimum number of points to move on to the 
-next tier is not equal to the total number of points able to 
-be acquired).
+**Description/Setup:**
+  - User class diagram: [here](https://revature-note-assets.s3.amazonaws.com/quizzard-class-diagram-tier-1.png)
+  - Push code to personal branch on repo provided by trainer. Notify trainer via Slack to proceed to Tier 2
 
-**WARNING**
+**Problem Set:**
+  - Create a method that checks if two strings are equal and return the boolean result.
+    - Value: 10 points
 
-Do not alter the files in the test folder for any reason
-whatsoever.
+
+  - Implement a POJO using the provided UML class model
+    - Value: 20 points
+
+
+  - Create a method that iterates over an integer array and returns their sum.
+    - Value: 30 points
+	
+
+  - Create a method that, given an integer, can raise each digit to the power of the overall length and return whether the sum of the powers is equal to the original integer.
+    - Value: 40 points
+
