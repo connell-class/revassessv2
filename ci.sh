@@ -9,6 +9,7 @@ test(){
         exitCode="`echo $pass | grep PointsTests | grep -c FAILURE`"
       	tierPoints="`echo $pass | grep -oE '_points:[0-9]+' | grep -Eo '[0-9]+'`"
         points="`expr $points + $tierPoints`"
+        mvn clean
 	if (( $exitCode > 0 ))
         then
             failedTier=$i
