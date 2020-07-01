@@ -23,7 +23,7 @@ if [ $failedTier > 0 ]
 then
     echo the failed tier was: tier $failedTier
     echo the total number of points are $points
-    exit 1
+    exit 100
 else
     echo revassess has been passed
     echo the total number of points received is $points
