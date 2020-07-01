@@ -1,6 +1,6 @@
 git config --global pull.rebase false
 test(){
-    for i in 1 2 3456
+    for i in 1 2 s3456
     do
         git checkout tier$i
         git pull
