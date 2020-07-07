@@ -17,8 +17,8 @@ test(){
                 failedTier=$i
                 break
         fi
+        cd ../
     done
-    cd ../
     echo done with tiers 1 and 2
     # exit previous loop and check variable for if assessment failed
     #if [ $exitCode -eq 0 ]
@@ -41,8 +41,8 @@ test(){
                             failedTier=$j
                             break
                     fi
-                    cd ../
             done
+        cd ../
     fi
     git checkout master
 }
