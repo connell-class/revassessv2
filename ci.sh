@@ -12,7 +12,7 @@ test(){
         points="`expr $points + $tierPoints`"
         mvn clean
     # if a tier failed, break and report
-        if (( $exitCode > 0 ))
+        if (( $exitCode < 0 ))
             then
                 failedTier=$i
                 break
@@ -30,6 +30,7 @@ test(){
                     pass="`mvn clean test -Dtest=Tier${i}Tests`"
                     exitCode="`echo $pass | grep PointsTests | grep -c FAILURE`"
                     tierPoints="`echo $pass | grep -oE '_points:[0-9]+' | grep -Eo '[0-9]+'`"
+                    echo points $points and tier points $tierPoints
                     points="`expr $points + $tierPoints`"
                     if (( $exitCode > 0 ))
                         then
@@ -39,7 +40,6 @@ test(){
                     cd ../
             done
     fi
-
     git checkout master
 }
 test
