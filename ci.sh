@@ -28,6 +28,7 @@ test(){
             git pull
             ls
             cd ./Revassess/
+            ls
             for j in 3 4 5 6
             do
                     pass="`mvn clean test -Dtest=Tier${i}Tests`"
