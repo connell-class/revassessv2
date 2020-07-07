@@ -2,6 +2,7 @@ package com.revature.tier3.answers;
 
 import static com.revature.tier3.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -44,7 +45,7 @@ public class Answer4Tests {
             assertEquals(userId, rs.getInt(3));
         }
       } catch(SQLException e){
-          e.printStackTrace();
+          fail();
       }
       addPoints(40);
     }
