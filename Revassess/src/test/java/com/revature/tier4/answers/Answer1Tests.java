@@ -1,6 +1,6 @@
-package com.tier4.answers;
+package com.revature.tier4.answers;
 
-import static com.tier3.answers.PointsTests.addPoints;
+import static com.revature.tier4.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 

@@ -1,6 +1,6 @@
-package com.tier4.answers;
+package com.revature.tier4.answers;
 
-import static com.tier4.answers.PointsTests.addPoints;
+import static com.revature.tier4.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertEquals;
 
 import com.revature.dao.CrudRepository;

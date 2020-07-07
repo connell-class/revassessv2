@@ -1,4 +1,4 @@
-package com.tier5.answers;
+package com.revature.tier5.answers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -13,7 +13,7 @@ import org.jsoup.select.Elements;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.tier5.answers.PointsTests.addPoints;
+import static com.revature.tier5.answers.PointsTests.addPoints;
 
 /**
  * prompt:

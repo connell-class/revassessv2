@@ -1,7 +1,7 @@
-package com.tier5.answers;
+package com.revature.tier5.answers;
 
-import static com.tier5.answers.PointsTests.addPoints;
-import static org.junit.Assert.assertTrue;
+import static com.revature.tier5.answers.PointsTests.addPoints;
+import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -37,7 +37,7 @@ public class Answer2Tests {
         String s = (String) (new WebDriverWait(wd, 10)).until(ExpectedConditions.jsReturnsValue("return JSON.stringify(getResp())"));
         wd.navigate().to("http://ec2-3-19-123-54.us-east-2.compute.amazonaws.com:9999/flashcard");
         String json = wd.findElement(By.tagName("body")).getText();
-        assertTrue(json.equals(s.toString()));
+        assertEquals(json.toString(), s);
         wd.close();
         addPoints(20);
     } 

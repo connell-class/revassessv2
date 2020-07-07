@@ -1,4 +1,4 @@
-package com.tier3.answers;
+package com.revature.tier6.answers;
 
 import static org.junit.Assert.assertTrue;
 
@@ -18,11 +18,13 @@ public class PointsTests {
     }
 
     @Before
-    public void print() {
+    public void print(){
         System.out.println("_points:"+points);
     }
+
+
     @Test
-    public void pointTest(){
-        assertTrue(points>=60);
+    public void testPoints(){
+        assertTrue(points>=200);
     }
 }

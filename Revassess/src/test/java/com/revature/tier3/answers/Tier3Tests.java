@@ -1,4 +1,4 @@
-package com.tier3.answers;
+package com.revature.tier3.answers;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

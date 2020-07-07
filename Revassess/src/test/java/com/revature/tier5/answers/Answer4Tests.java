@@ -1,6 +1,6 @@
-package com.tier5.answers;
+package com.revature.tier5.answers;
 
-import static com.tier5.answers.PointsTests.addPoints;
+import static com.revature.tier5.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;

@@ -1,6 +1,6 @@
-package com.tier6.answers;
+package com.revature.tier6.answers;
 
-import static com.tier6.answers.PointsTests.addPoints;
+import static com.revature.tier6.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
