@@ -26,6 +26,7 @@ test(){
         then
             git checkout tiers3456
             git pull
+            ls
             cd ./Revassess/
             for j in 3 4 5 6
             do
