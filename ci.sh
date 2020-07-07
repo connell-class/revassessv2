@@ -19,8 +19,10 @@ test(){
         fi
         cd ../
     done
+    echo done with tiers 1 and 2
     # exit previous loop and check variable for if assessment failed
-    if [ $exitCode -eq 0 ]
+    #if [ $exitCode -eq 0 ]
+    if [ 1 -eq 1 ]
         then
             git checkout tiers3456
             git pull
