@@ -16,7 +16,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>5.4.10.FINAL</version>
+      <version>5.4.12.FINAL</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
