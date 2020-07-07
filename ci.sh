@@ -12,17 +12,15 @@ test(){
         points="`expr $points + $tierPoints`"
         mvn clean
     # if a tier failed, break and report
-        if (( $exitCode < 0 ))
+        if (( $exitCode > 0 ))
             then
                 failedTier=$i
                 break
         fi
         cd ../
     done
-    echo done with tiers 1 and 2
     # exit previous loop and check variable for if assessment failed
-    #if [ $exitCode -eq 0 ]
-    if [ 1 -eq 1 ]
+    if [ $exitCode -eq 0 ]
         then
             git checkout tiers3456
             git pull
@@ -32,9 +30,8 @@ test(){
                     pass="`mvn test -Dtest=Tier${j}Tests`"
                     exitCode="`echo $pass | grep PointsTests | grep -c FAILURE`"
                     tierPoints="`echo $pass | grep -oE '_points:[0-9]+' | grep -Eo '[0-9]+'`"
-                    echo points $points and tier points $tierPoints
                     points="`expr $points + $tierPoints`"
-                    if (( $exitCode < 0 ))
+                    if (( $exitCode > 0 ))
                         then
                             failedTier=$j
                             break
@@ -47,6 +44,7 @@ test(){
 test
 if [ $failedTier > 0 ]
 then
+    echo you have successfully passed "`expr $failedTier - 1`" tiers
     echo the failed tier was: tier $failedTier
     echo the total number of points are $points
     exit 100
