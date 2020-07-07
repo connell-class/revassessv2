@@ -30,12 +30,11 @@ test(){
             for j in 3 4 5 6
             do
                     pass="`mvn test -Dtest=Tier${j}Tests`"
-                    echo $pass
                     exitCode="`echo $pass | grep PointsTests | grep -c FAILURE`"
                     tierPoints="`echo $pass | grep -oE '_points:[0-9]+' | grep -Eo '[0-9]+'`"
                     echo points $points and tier points $tierPoints
                     points="`expr $points + $tierPoints`"
-                    if (( $exitCode > 0 ))
+                    if (( $exitCode < 0 ))
                         then
                             failedTier=$j
                             break
