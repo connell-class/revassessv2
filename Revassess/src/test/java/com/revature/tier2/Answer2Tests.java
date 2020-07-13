@@ -15,10 +15,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * prompt:
- * Write a statement that 
- * will insert a new user 
- * into the APP_user table 
+ * prompt: Write a statement that will insert a new user into the APP_user table
  * with a role of PREMIUM_user
  * 
  */
@@ -37,15 +34,16 @@ public class Answer2Tests {
 
     @Test
     public void test2() {
-        Session sess = TestConfiguration.getSessionFactory().openSession();
-        Transaction tx = sess.beginTransaction();
-        List<User> after, before;
-        before = sess.createQuery("from User where roleId=4",User.class).list();
-        sess.createNativeQuery(answer2Contents,User.class).executeUpdate();
-        after = sess.createQuery("from User where roleId=4",User.class).list();
-        assertEquals(after.size(), before.size()+1);
-        tx.rollback();
+        try (Session sess = TestConfiguration.getSessionFactory().openSession()) {
+            Transaction tx = sess.beginTransaction();
+            List<User> after, before;
+            before = sess.createQuery("from User where roleId=4", User.class).list();
+            sess.createNativeQuery(answer2Contents, User.class).executeUpdate();
+            after = sess.createQuery("from User where roleId=4", User.class).list();
+            assertEquals(after.size(), before.size() + 1);
+            tx.rollback();
 
-        PointsTests.addPoints(20);
+            PointsTests.addPoints(20);
+        }
     }
 }

@@ -24,7 +24,7 @@ public class TestConfiguration {
         props.load(new FileInputStream(new File("src/sql/setup.properties")));
         return new Configuration().addProperties(props)
                 .setProperty("hibernate.connection.driver_class", findDriver(props))
-                .setProperty("hibernate.connection.pool_size", "4")
+                .setProperty("hibernate.connection.pool_size", "1")
                 .setProperty("hibernate.connection.isolation", String.valueOf(Connection.TRANSACTION_SERIALIZABLE))
                 .setProperty("hibernate.hbm2ddl.auto", "none").setProperty("hibernate.show_sql", "true")
                 .addAnnotatedClass(UserStudySet.class).addAnnotatedClass(UserProblem4.class)

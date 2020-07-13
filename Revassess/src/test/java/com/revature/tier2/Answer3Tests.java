@@ -13,13 +13,11 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.Before;
 import org.junit.Test;
-/**
- * prompt:
- * Write a query that will 
- * find all user and study 
- * set info related to the 
- * user with an id of 5
 
+/**
+ * prompt: Write a query that will find all user and study set info related to
+ * the user with an id of 5
+ * 
  */
 public class Answer3Tests {
 
@@ -36,15 +34,13 @@ public class Answer3Tests {
 
     @Test
     public void test3() {
-        Session sess = TestConfiguration.getSessionFactory().openSession();
-        Transaction tx = sess.beginTransaction();
-        List<UserStudySet> users = sess.createNativeQuery(answer3Contents, UserStudySet.class).list();
-        assertEquals(3, users.size());
-        tx.rollback();
-
-        PointsTests.addPoints(30);
+        try (Session sess = TestConfiguration.getSessionFactory().openSession()) {
+            Transaction tx = sess.beginTransaction();
+            List<UserStudySet> users = sess.createNativeQuery(answer3Contents, UserStudySet.class).list();
+            assertEquals(3, users.size());
+            tx.rollback();
+            PointsTests.addPoints(30);
+        }
     }
 
-
-    
 }
