@@ -17,10 +17,10 @@
   - Push to personal branch and notify trainer to proceed to Tier 5.
 
 **Problem Set:**
-  - Establish a connection to a deployed database using the provided ConnectionConfig class.
+  - Establish a connection to a deployed database using the provided ConnectionUtil class.
     - Value: 10 points
     
-  - implement the ConnectionConfig class's callAbsoluteValueFunction method with a callable statement to call the absolute value scalar function.
+  - implement the ConnectionUtil class's callAbsoluteValueFunction method with a callable statement to call the absolute value scalar function.
     - Value: 20 Points
     
   - Implement only the `CrudRepository` interface methods within `UserRepository` class using the provided class diagram
