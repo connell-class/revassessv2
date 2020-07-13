@@ -28,7 +28,7 @@ public class Answer3Tests {
     @Before
     public void setup() {
         try {
-            answer3Contents = getFileContents("answer3");
+            answer3Contents = getFileContents("answer3").replace(';', ' ');
         } catch (IOException e) {
             e.printStackTrace();
         }

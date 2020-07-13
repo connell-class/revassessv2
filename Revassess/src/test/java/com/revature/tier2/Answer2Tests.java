@@ -29,7 +29,7 @@ public class Answer2Tests {
     @Before
     public void setup() {
         try {
-            answer2Contents = getFileContents("answer2");
+            answer2Contents = getFileContents("answer2").replace(';', ' ');
         } catch (IOException e) {
             e.printStackTrace();
         }
