@@ -15,7 +15,8 @@
   - Push to personal branch and notify trainer to proceed to Tier 6.
 
 **Problem Set:**
-  - Create an HTML file which includes the Bootstrap CDN link and script tags, as well as a script tag that imports your own JavaScript file.
+  - Use the index HTML file and include the Bootstrap CDN link and script tags, as well as a script tag that imports the
+  index.js file.
     - Value: 10 points
 
 

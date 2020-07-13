@@ -1,12 +1,11 @@
 package com.revature.tier5.answers;
 
+import static com.revature.tier5.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,15 +13,13 @@ import org.jsoup.select.Elements;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.revature.tier5.answers.PointsTests.addPoints;
-
 /**
  * prompt:
- * Create an HTML file which 
- * includes the Bootstrap CDN 
- * link and script tags, as 
- * well as a script tag that 
- * imports your own JavaScript file.
+ * Use the index HTML file 
+ * and include the Bootstrap 
+ * CDN link and script tags, 
+ * as well as a script tag 
+ * that imports the index.js file.
  */
 public class Answer1Tests {
 
