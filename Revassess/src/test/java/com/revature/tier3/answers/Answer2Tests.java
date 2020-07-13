@@ -32,7 +32,6 @@ public class Answer2Tests {
         String sequence = ConnectionUtil.TIER_3_SEQUENCE_NAME;
         assertEquals(0, getSequenceResult(sequence)%3);
         assertEquals(1, (getSequenceResult(sequence)+1)%3);
-        assertEquals(2, (getSequenceResult(sequence)+2)%3);
         addPoints(20);
     }
 
