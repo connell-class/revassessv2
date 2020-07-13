@@ -21,7 +21,7 @@ public class Answer2Tests {
     public void test2() {
         Class<User> userClass;
         List<Field> fields;
-        String[] fieldNames = { "id", "firstName", "lastName", "userName", "password", "role" };
+        String[] fieldNames = { "id", "firstName", "lastName", "username", "password", "role" };
         userClass = User.class;
         fields = Arrays.asList(userClass.getDeclaredFields());
         assertEquals(fields.size(), fieldNames.length);
