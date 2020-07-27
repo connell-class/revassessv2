@@ -17,10 +17,20 @@ import org.junit.Test;
 
 /**
  * prompt: 
- * Implement a stored procedure that takes a user's id as an IN
- * parameter and a cursor as a OUT parameter. This procedure will insert a
- * result set into the provided cursor; the result set must contain the study
- * sets belonging to the user with the provided id.
+ * Implement a stored procedure that takes 
+ * three integers (i,j and k) and finds how
+ * many numbers between i and j (inclusively)
+ * are divisible by k. 
+ * Example: proc(12, 18, 3) -> returns 3
+ * 12/3 = 4
+ * 13/3 = 4.333...
+ * 14/3 = 4.667...
+ * 15/3 = 5
+ * 16/3 = 5.333...
+ * 17/3 = 5.667...
+ * 18/3 = 6
+ * So there are 3 numbers in the inclusive range from 
+ * 12 to 18 that are divisible by 3.
  */
 public class Answer4Tests {
 
@@ -28,25 +38,25 @@ public class Answer4Tests {
     @Test
     public void test4() {
       try (Connection conn = DriverManager.getConnection(ConnectionUtil.URL, ConnectionUtil.USERNAME, ConnectionUtil.PASSWORD)) {
-        String sql = "{ call " + ConnectionUtil.TIER_3_PROCEDURE_NAME + "(?, ?) }";
-        CallableStatement cs = conn.prepareCall(sql);
-        // First parameter is set to user_id 4, since this user owns study sets
-        int userId = 4;
-        cs.setInt(1, userId);
-        // Second parameter is the cursor
-        cs.registerOutParameter(2, Types.REF_CURSOR);
-        // Manually execute callable statement
-        cs.execute();
-        // Select OUT parameter
-        ResultSet rs = (ResultSet) cs.getObject(2);
-        while (rs.next()) {
-            // Assert that user_id is the owner of every study set
-            // Expects user_id 4 from every third column (OWNER_ID)
-            assertEquals(userId, rs.getInt(3));
-        }
+    	  assertEquals(4, callFun(conn, 3, 18, 4));
+    	  assertEquals(8, callFun(conn, 12, 54, 6));
+    	  assertEquals(1, callFun(conn, 9, 30, 27));
       } catch(SQLException e){
           fail();
       }
       addPoints(40);
+    }
+    
+    private int callFun(Connection conn, int i, int j, int k) throws SQLException {
+    	 String sql = "{ call " + ConnectionUtil.TIER_3_PROCEDURE_NAME + "(?, ?, ?) }";
+         CallableStatement cs = conn.prepareCall(sql);
+         cs.setInt(1, i);
+         cs.setInt(2, j);
+         cs.setInt(3, k);
+         ResultSet rs = cs.executeQuery();
+         while(rs.next()) {
+        	 return rs.getInt(1);
+         }
+    	return -1;
     }
 }

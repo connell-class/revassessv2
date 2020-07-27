@@ -24,6 +24,15 @@
     - Value: 30 points
 	
 
-  - Implement a stored procedure that takes a user's id as an IN parameter and a cursor as a OUT parameter. This procedure will insert a result set into the provided cursor; the result set must contain the study sets belonging to the user with the provided id.
+  - Implement a stored procedure that takes three integers (i,j and k) and finds how many numbers between i and j (inclusively) are divisible by k. Example: proc(12, 18, 3) -> returns 3
+ * 12/3 = 4
+ * 13/3 = 4.333...
+ * 14/3 = 4.667...
+ * 15/3 = 5
+ * 16/3 = 5.333...
+ * 17/3 = 5.667...
+ * 18/3 = 6
+
+   So there are 3 numbers in the inclusive range from 12 to 18 that are divisible by 3.
     - Value: 40 points
 
