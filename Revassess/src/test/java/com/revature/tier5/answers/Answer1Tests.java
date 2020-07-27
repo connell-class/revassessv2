@@ -3,6 +3,7 @@ package com.revature.tier5.answers;
 import static com.revature.tier5.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,8 +40,8 @@ public class Answer1Tests {
             Elements scripts = html.getElementsByTag("script");
             assertEquals(3, scripts.size());
             scripts.forEach(e->assertTrue(e.attr("src").matches(sources)));
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            fail();
         }
         addPoints(10);
     }

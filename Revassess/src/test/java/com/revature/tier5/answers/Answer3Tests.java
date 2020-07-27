@@ -2,6 +2,7 @@ package com.revature.tier5.answers;
 
 import static com.revature.tier5.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -61,6 +62,7 @@ public class Answer3Tests {
 
     @Test
     public void testContent() {
+    	try {
         Map<String, String> elMap= new HashMap<>();
         ((JavascriptExecutor)wd).executeScript("document.getElementById('cardId').innerHTML=''");
         ((JavascriptExecutor)wd).executeScript("document.getElementById('cardQstn').innerHTML=''");
@@ -73,6 +75,9 @@ public class Answer3Tests {
         wd.close();
         elMap.keySet().stream().forEach(e->assertTrue(jsonMap.get(e).contains(elMap.get(e))));
         addPoints(30);
+    	} catch(Exception e) {
+    		fail();
+    	}
     }
 
 }

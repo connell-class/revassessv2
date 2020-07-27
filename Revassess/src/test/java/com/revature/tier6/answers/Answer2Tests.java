@@ -2,6 +2,7 @@ package com.revature.tier6.answers;
 
 import static com.revature.tier6.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.mockito.Mockito.when;
 
 import java.io.IOException;
@@ -73,6 +74,7 @@ public class Answer2Tests {
     @Test
     public void test2() throws ServletException, IOException, IllegalAccessException, IllegalArgumentException,
             InvocationTargetException, NoSuchMethodException, SecurityException {
+    	try {
         HttpServletRequest request = Mockito.mock(HttpServletRequest.class);
         HttpServletResponse response = Mockito.mock(HttpServletResponse.class);
         StringWriter stringWriter = new StringWriter();
@@ -88,6 +90,9 @@ public class Answer2Tests {
         System.out.println(servletJson);
         System.out.println(jsonKeys);
         jsonKeys.stream().forEach(s->assertTrue(servletJson.containsKey(s)));
+    	} catch(Exception e) {
+    		fail();
+    	}
     }
 
     

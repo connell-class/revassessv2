@@ -2,6 +2,7 @@ package com.revature.tier3.answers;
 
 import static com.revature.tier3.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,10 +30,14 @@ public class Answer2Tests {
 
     @Test
     public void testSequence() {
+        try{
         String sequence = ConnectionUtil.TIER_3_SEQUENCE_NAME;
         assertEquals(0, getSequenceResult(sequence)%3);
         assertEquals(1, (getSequenceResult(sequence)+1)%3);
         addPoints(20);
+        } catch(Exception e){
+            fail();
+        }
     }
 
     public long getSequenceResult(final String sequenceName) {

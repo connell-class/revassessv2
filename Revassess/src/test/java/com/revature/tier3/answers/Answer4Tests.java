@@ -1,20 +1,5 @@
 package com.revature.tier3.answers;
 
-import static com.revature.tier3.answers.PointsTests.addPoints;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Types;
-
-import com.revature.config.ConnectionUtil;
-
-import org.junit.Test;
-
 /**
  * prompt: 
  * Implement a stored procedure that takes 
@@ -35,28 +20,30 @@ import org.junit.Test;
 public class Answer4Tests {
 
 
-    @Test
-    public void test4() {
-      try (Connection conn = DriverManager.getConnection(ConnectionUtil.URL, ConnectionUtil.USERNAME, ConnectionUtil.PASSWORD)) {
-    	  assertEquals(4, callFun(conn, 3, 18, 4));
-    	  assertEquals(8, callFun(conn, 12, 54, 6));
-    	  assertEquals(1, callFun(conn, 9, 30, 27));
-      } catch(SQLException e){
-          fail();
-      }
-      addPoints(40);
-    }
+    // @Test
+    // public void test4() {
+    //   try (Connection conn = DriverManager.getConnection(ConnectionUtil.URL, ConnectionUtil.USERNAME, ConnectionUtil.PASSWORD)) {
+    // 	  assertEquals(4, callFun(conn, 3, 18, 4));
+    // 	  assertEquals(8, callFun(conn, 12, 54, 6));
+    // 	  assertEquals(1, callFun(conn, 9, 30, 27));
+    //   } catch(Exception e){
+    //       fail();
+    //   }
+    //   addPoints(40);
+    // }
     
-    private int callFun(Connection conn, int i, int j, int k) throws SQLException {
-    	 String sql = "{ call " + ConnectionUtil.TIER_3_PROCEDURE_NAME + "(?, ?, ?) }";
-         CallableStatement cs = conn.prepareCall(sql);
-         cs.setInt(1, i);
-         cs.setInt(2, j);
-         cs.setInt(3, k);
-         ResultSet rs = cs.executeQuery();
-         while(rs.next()) {
-        	 return rs.getInt(1);
-         }
-    	return -1;
-    }
-}
+    // private int callFun(Connection conn, int i, int j, int k) throws SQLException {
+    // 	 String sql = "{ call " + ConnectionUtil.TIER_3_PROCEDURE_NAME + "(?, ?, ?) }";
+    //      CallableStatement cs = conn.prepareCall(sql);
+    //      cs.setInt(1, i);
+    //      cs.setInt(2, j);
+    //      cs.setInt(3, k);
+    //      ResultSet rs = cs.executeQuery();
+    //      while(rs.next()) {
+    //     	 return rs.getInt(1);
+    //      }
+    // 	return -1;
+    // }
+
+
+  }

@@ -2,6 +2,7 @@ package com.revature.tier3.answers;
 
 import static com.revature.tier3.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import com.revature.config.TestConfig;
 
@@ -17,6 +18,7 @@ public class Answer3Tests {
 
     @Test
     public void test3() {
+        try{
         Session sess = TestConfig.getInstance().openSession();
         Transaction tx = sess.beginTransaction();
         assertNotNull(sess.createNativeQuery(
@@ -26,6 +28,9 @@ public class Answer3Tests {
         assertNotNull(sess.createNativeQuery("insert into study_set (name, owner_id) values ('testing',2)"));
         tx.rollback();
         addPoints(30);
+        } catch(Exception e){
+            fail();
+        }
     }
 
 }

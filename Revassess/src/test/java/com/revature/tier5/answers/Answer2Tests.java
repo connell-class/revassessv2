@@ -2,6 +2,7 @@ package com.revature.tier5.answers;
 
 import static com.revature.tier5.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -34,11 +35,15 @@ public class Answer2Tests {
     }
     @Test
     public void testAjax() {
+    	try {
         String s = (String) (new WebDriverWait(wd, 10)).until(ExpectedConditions.jsReturnsValue("return JSON.stringify(getResp())"));
         wd.navigate().to("http://ec2-3-19-123-54.us-east-2.compute.amazonaws.com:9999/flashcard");
         String json = wd.findElement(By.tagName("body")).getText();
         assertEquals(json.toString(), s);
         wd.close();
         addPoints(20);
+    	} catch(Exception e) {
+    		fail();
+    	}
     } 
 }

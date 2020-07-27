@@ -2,6 +2,7 @@ package com.revature.tier5.answers;
 
 import static com.revature.tier5.answers.PointsTests.addPoints;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -65,6 +66,7 @@ public class Answer4Tests {
 
     @Test
     public void testCarousel() throws InterruptedException {
+    	try {
         for(int i = 0; i<=2; i++){
             next();
             Thread.sleep(3000);
@@ -72,7 +74,9 @@ public class Answer4Tests {
         }
         wd.close();
         addPoints(40);
-        
+    	} catch(Exception e) {
+    		fail();
+    	}
     }
 
     private Map<String, String> refreshElements(){
