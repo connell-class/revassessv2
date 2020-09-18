@@ -11,7 +11,7 @@ window.addEventListener('load',callFlashcardApi);
 
 let resp;
 
-//assign the returned json to the resp variable
+//assign the returned json to the resp variable. ex: resp = responseObject
 async function callFlashcardApi(){
 }
 
