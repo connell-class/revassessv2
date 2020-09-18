@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e0c8ef32-34a6-4f9a-aeae-9e68e3270e3c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Revassess/src/main/webapp/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Revassess/src/main/webapp/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revassess/src/test/java/com/revature/tier3/answers/Answer1Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Revassess/src/test/java/com/revature/tier3/answers/Answer1Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revassess/src/test/java/com/revature/tier5/answers/Answer1Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Revassess/src/test/java/com/revature/tier5/answers/Answer1Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revassess/src/test/java/com/revature/tier5/answers/Answer2Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Revassess/src/test/java/com/revature/tier5/answers/Answer2Tests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1heRajsHATiR2sjZH9ocqN9LLXO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="revassess" type="JUnit" factoryName="JUnit">
+      <module name="v2" />
+      <useClassPathOnly />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0c8ef32-34a6-4f9a-aeae-9e68e3270e3c" name="Default Changelist" comment="" />
+      <created>1600369638322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600369638322</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600370200389">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1366.0.1366.728@0.0.1366.728" timestamp="1600370200389" />
+  </component>
+</project>

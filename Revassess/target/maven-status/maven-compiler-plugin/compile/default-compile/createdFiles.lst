@@ -1,4 +1,3 @@
-com\revature\tier1\SumOverArray.class
-com\revature\tier1\User.class
-com\revature\tier1\NumberSumLength.class
-com\revature\tier1\CompareStrings.class
+com\revature\tier2\model\UserStudySet.class
+com\revature\tier2\model\User.class
+com\revature\tier2\model\UserProblem4.class
